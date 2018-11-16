@@ -5,7 +5,7 @@ A malicious alien invades the earth and says he'll destroy the earth unless we m
 Specification:
 
 1. He wants an application with two counters: a big one and a small one.
-2. When the little counter is clicked, the big count and the small count are both incremented.
+2. When the small counter is clicked, the big count and the small count are both incremented.
 3. When the big counter is clicked, only the big count will be incremented.
 4. The alien's final demand: the small counter cannot be rendered from the big counter.
 
