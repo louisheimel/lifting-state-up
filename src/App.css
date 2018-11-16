@@ -30,3 +30,27 @@
     transform: rotate(360deg);
   }
 }
+
+div {
+  font-weight: bold;
+  user-select: none;
+  color: #fff;
+}
+
+p {
+  width: 100%;
+}
+
+.blue {
+  height: 250px;
+  background-color: blue;
+  background-color: #2b9eb3;
+  width: 100%;
+}
+
+.red {
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  background-color: #f15946;
+}
