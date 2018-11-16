@@ -12,3 +12,6 @@ Specification:
 How can we do this? Props are passed down from parent component to child component, but there is no way we know of to pass data up from a child to a parent. We can pass any value down as a prop from a parent to a child...
 
 We know that functions are values in Javascript. So, we can create a function which modifies the state of the parent, and pass it down as a prop to the child component. This enables the child component to indirectly set the state of it's parent!
+
+BONUS:
+If you're ambitious, google "react hooks" and use the latest and greatest react hooks feature to rewrite the app.
