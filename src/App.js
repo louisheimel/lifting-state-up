@@ -1,50 +1,38 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class Small extends Component {
-  state = {counter: 0};
-  incrementSmallCounter = () => {
-    this.props.handleSmallClick();
-    this.setState({counter: this.state.counter + 1});
-  };
-  render() {
-    return (
-      <div className="small" onClick={this.incrementSmallCounter}>
-        <p>{this.state.counter}</p>
-      </div>
-    );
-  }
+function Small(props) {
+  const [clicks, setClicks] = useState(0);
+  return (
+    <div
+      className="small"
+      onClick={() => {
+        props.handleSmallClick();
+        setClicks(clicks + 1);
+      }}>
+      <p>{clicks}</p>
+    </div>
+  );
 }
 
-class Big extends Component {
-  state = {counter: 0};
-  incrementBigCounter = e => {
-    e.preventDefault();
-    this.setState({counter: this.state.counter + 1});
-  };
-  render() {
-    return (
-      <div className="big" onClick={this.incrementBigCounter}>
-        <p>{this.state.counter + this.props.smallClicks}</p>
-      </div>
-    );
-  }
+function Big(props) {
+  const [clicks, setClicks] = useState(0);
+  return (
+    <div className="big" onClick={() => setClicks(clicks + 1)}>
+      <p>{clicks + props.smallClicks}</p>
+    </div>
+  );
 }
 
-class App extends Component {
-  state = {smallClicks: 0};
-  handleSmallClick = () =>
-    this.setState({smallClicks: this.state.smallClicks + 1});
-
-  render() {
-    return (
-      <div className="App">
-        <Big smallClicks={this.state.smallClicks} />
-        <Small handleSmallClick={this.handleSmallClick} />
-      </div>
-    );
-  }
+function App() {
+  const [smallClicks, setSmallClicks] = useState(0);
+  return (
+    <div className="App">
+      <Big smallClicks={smallClicks} />
+      <Small handleSmallClick={() => setSmallClicks(smallClicks + 1)} />
+    </div>
+  );
 }
 
 export default App;
