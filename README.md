@@ -9,7 +9,7 @@ Specification:
 3. When the big counter is clicked, only the big count will be incremented.
 4. The alien's final demand: the small counter cannot be rendered from the big counter.
 
-How can we do this? Props are passed down from parent component to child component, but there is no way we know of to pass data up from a child to a parent....
+How can we do this? Props are passed down from parent component to child component, but there is no way we know of to pass data up from a child to a parent or from a "sibling" to a "sibling"....
 
 If you want to see the answer, run `git checkout -b solution` to switch to the solution branch of this repo.
 
