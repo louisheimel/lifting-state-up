@@ -13,5 +13,7 @@ How can we do this? Props are passed down from parent component to child compone
 
 We know that functions are values in Javascript. So, we can create a function which modifies the state of the parent, and pass it down as a prop to the child component. This enables the child component to indirectly set the state of it's parent!
 
+Here's a running demo of the finished app we're trying to build: http://future-marble.surge.sh/
+
 BONUS:
 This bonus is neither required knowledge nor currently useful. If you're VERY ambitious, google "react hooks" and use the latest and greatest react hooks feature to rewrite the app. You can check out the solution on the `solution-with-hooks` branch.
