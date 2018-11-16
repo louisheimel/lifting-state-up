@@ -4,13 +4,9 @@ import './App.css';
 
 class Small extends Component {
   state = {counter: 0};
-  incrementSmallCounter = () => {
-    this.props.handleSmallClick();
-    this.setState({counter: this.state.counter + 1});
-  };
   render() {
     return (
-      <div className="small" onClick={this.incrementSmallCounter}>
+      <div className="small">
         <p>{this.state.counter}</p>
       </div>
     );
@@ -19,14 +15,10 @@ class Small extends Component {
 
 class Big extends Component {
   state = {counter: 0};
-  incrementBigCounter = e => {
-    e.preventDefault();
-    this.setState({counter: this.state.counter + 1});
-  };
   render() {
     return (
-      <div className="big" onClick={this.incrementBigCounter}>
-        <p>{this.state.counter + this.props.smallClicks}</p>
+      <div className="big">
+        <p>{this.state.counter}</p>
       </div>
     );
   }
@@ -34,14 +26,12 @@ class Big extends Component {
 
 class App extends Component {
   state = {smallClicks: 0};
-  handleSmallClick = () =>
-    this.setState({smallClicks: this.state.smallClicks + 1});
 
   render() {
     return (
       <div className="App">
-        <Big smallClicks={this.state.smallClicks} />
-        <Small handleSmallClick={this.handleSmallClick} />
+        <Big />
+        <Small />
       </div>
     );
   }
