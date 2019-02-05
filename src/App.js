@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class Small extends Component {
-  state = {counter: 0};
+  state = { counter: 0 };
   render() {
     return (
       <div className="small">
@@ -14,7 +14,7 @@ class Small extends Component {
 }
 
 class Big extends Component {
-  state = {counter: 0};
+  state = { counter: 0 };
   render() {
     return (
       <div className="big">
@@ -25,13 +25,13 @@ class Big extends Component {
 }
 
 class App extends Component {
-  state = {smallClicks: 0};
+  state = { smallClicks: 0 };
 
   render() {
     return (
       <div className="App">
-        <Big />
-        <Small />
+        <Big count={3} />
+        <Small count={4} />
       </div>
     );
   }
